@@ -7,7 +7,10 @@ $bootstrap-sass-asset-helper: false !default;
 // Variables
 // --------------------------------------------------
 
-
+.gradient{
+	background: rgb(239, 210, 220);
+//  background: linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(144,228,162,1) 100%);
+}
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -19,7 +22,10 @@ $gray: lighten($gray-base, 33.5%) !default; // #555
 $gray-light: lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary: darken(#428bca, 6.5%) !default; // #337ab7
+$babel-mint: #7e9a84;
+// $brand-primary: darken(#428bca, 6.5%) !default; // #337ab7
+$brand-primary: $babel-mint;
+
 $brand-success: #5cb85c !default;
 $brand-info: #5bc0de !default;
 $brand-warning: #f0ad4e !default;
@@ -904,7 +910,6 @@ $padding-base-vertical: 14px !default;
 
 $brand-primary: #F14E95 !default;
 $brand-secondary: #118DF0 !default;
-
 $brand-white: #fff;
 $brand-black: #000;
 $brand-darker: #444;
@@ -3407,7 +3412,7 @@ figure {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, .5);
+		background: rgba(0, 0, 0, 0.5);
 		@include transition(.5s);
 	}
 
@@ -3443,7 +3448,7 @@ figure {
 		top: 0;
 		left: 0;
 		right: 0;
-		background: rgba(0, 0, 0, .5);
+		background: rgba(0, 0, 0, .3);
 	}
 
 	>.fh5co-container {
@@ -3973,7 +3978,7 @@ form {
 .fh5co-cover {
 	.display-tc {
 		display: table-cell !important;
-		vertical-align: middle;
+		vertical-align: top;
 
 		h1,
 		h2 {
@@ -3983,6 +3988,7 @@ form {
 		}
 
 		h1 {
+			padding-bottom: 80px;
 			margin-bottom: 0px;
 			font-size: 100px;
 			line-height: 1.5;
