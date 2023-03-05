@@ -38,7 +38,7 @@
             blind texts. Separated they live in Bookmarksgrove</p>
         </div>
       </div>
-      <p class="heart text-center"><i class="icon-heart2"></i></p>
+      <p class="heart text-center"><i class="icon-heart2">❤️</i></p>
       <div class="couple-half">
         <div class="bride">
           <img src="/assets/images/Fotos/Perfil_Cesar.jpg" alt="groom" class="img-responsive">
@@ -113,188 +113,38 @@
     </div>
   </div>
 </div>
-<div id="fh5co-event" class="fh5co-bg" style="background-image:url(/assets/images/Fotos/ciudadela.jpg);" >
+<div id="fh5co-event" class="fh5co-bg" style="background-image:url(/assets/images/Fotos/ciudadela.jpg);">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-        <span></span>
+        <!-- <span></span> -->
         <h2>Alojamiento</h2>
       </div>
     </div>
-    <div class="row">
-      <!-- <div class="display-t"> -->
-        <!-- <div class="display-tc"> -->
-          <div class="col-md-10 col-md-offset-1">
-            <div class="col-md-4 col-sm-4 text-center">
-              <div class="event-wrap animate-box">
-                <h3>El Toro Hotel & Spa</h3>
-                <div class="event-col">
-                  <i class="icon-clock"></i>
-                  <span>11:45</span>
-                  <span></span>
-                </div>
-                <div class="event-col">
-                  <i class="icon-calendar"></i>
-                  <span>Iglesia de San Lorenzo</span>
-                  <span></span>
-                </div>
-                <p>lorem ipsum</p>
-              </div>
+    <ng-container *ngFor="let row of hotelGroups; let index = index">
+      <div class="row">
+        <!-- <div class="col-md-10 col-md-offset-1"> -->
+        <div class="col-md-4 col-sm-4 text-center" *ngFor="let h of row; let i = index">
+          <div class="event-wrap animate-box">
+            <h3>{{h.name}}</h3>
+            <div class="event-col">
+              <i class="icon-clock"></i>
+              <span>11:45</span>
+              <span></span>
             </div>
-
-            <div class="col-md-4 col-sm-4 text-center">
-              <div class="event-wrap animate-box">
-                <h3>Hotel Tres Reyes</h3>
-                <div class="event-col">
-                  <i class="icon-clock"></i>
-                  <span>14:00</span>
-                  <span></span>
-                </div>
-                <div class="event-col">
-                  <i class="icon-calendar"></i>
-                  <span>pamplona el toro hotel & spa</span>
-                  <span></span>
-                </div>
-                <p>lorem ipsum</p>
-              </div>
+            <div class="event-col">
+              <i class="icon-calendar"></i>
+              <span>Iglesia de San Lorenzo</span>
+              <span></span>
             </div>
-            <div class="col-md-4 col-sm-4 text-center">
-              <div class="event-wrap animate-box">
-                <h3>Hotel Maisonave</h3>
-                <div class="event-col">
-                  <i class="icon-clock"></i>
-                  <span>14:00</span>
-                  <span></span>
-                </div>
-                <div class="event-col">
-                  <i class="icon-calendar"></i>
-                  <span>pamplona el toro hotel & spa</span>
-                  <span></span>
-                </div>
-                <p>lorem ipsum</p>
-              </div>
-            </div>
-          <!-- </div> -->
-        <!-- </div> -->
-      </div>
-    </div>
-    <br>
-    <div class="row">
-      <!-- <div class="display-t"> -->
-        <!-- <div class="display-tc"> -->
-          <div class="col-md-10 col-md-offset-1">
-            <div class="col-md-4 col-sm-4 text-center">
-              <div class="event-wrap animate-box">
-                <h3>Hotel Pompaelo Urban & Spa</h3>
-                <div class="event-col">
-                  <i class="icon-clock"></i>
-                  <span>11:45</span>
-                  <span></span>
-                </div>
-                <div class="event-col">
-                  <i class="icon-calendar"></i>
-                  <span>Iglesia de San Lorenzo</span>
-                  <span></span>
-                </div>
-                <p>lorem ipsum</p>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-sm-4 text-center">
-              <div class="event-wrap animate-box">
-                <h3>hotel2</h3>
-                <div class="event-col">
-                  <i class="icon-clock"></i>
-                  <span>14:00</span>
-                  <span></span>
-                </div>
-                <div class="event-col">
-                  <i class="icon-calendar"></i>
-                  <span>pamplona el toro hotel & spa</span>
-                  <span></span>
-                </div>
-                <p>lorem ipsum</p>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-4 text-center">
-              <div class="event-wrap animate-box">
-                <h3> Hotel Ciudadela Pamplona </h3>
-                <div class="event-col">
-                  <i class="icon-clock"></i>
-                  <span>14:00</span>
-                  <span></span>
-                </div>
-                <div class="event-col">
-                  <i class="icon-calendar"></i>
-                  <span>pamplona el toro hotel & spa</span>
-                  <span></span>
-                </div>
-                <p>lorem ipsum</p>
-              </div>
-            </div>
-          <!-- </div> -->
-        <!-- </div> -->
-      </div>
-    </div>
-    <br>
-    <div class="row">
-      <!-- <div class="display-t"> -->
-        <!-- <div class="display-tc"> -->
-          <div class="col-md-10 col-md-offset-1">
-            <div class="col-md-4 col-sm-4 text-center">
-              <div class="event-wrap animate-box">
-                <h3>Hotel 1</h3>
-                <div class="event-col">
-                  <i class="icon-clock"></i>
-                  <span>11:45</span>
-                  <span></span>
-                </div>
-                <div class="event-col">
-                  <i class="icon-calendar"></i>
-                  <span>Iglesia de San Lorenzo</span>
-                  <span></span>
-                </div>
-                <p>lorem ipsum</p>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-sm-4 text-center">
-              <div class="event-wrap animate-box">
-                <h3>hotel2</h3>
-                <div class="event-col">
-                  <i class="icon-clock"></i>
-                  <span>14:00</span>
-                  <span></span>
-                </div>
-                <div class="event-col">
-                  <i class="icon-calendar"></i>
-                  <span>pamplona el toro hotel & spa</span>
-                  <span></span>
-                </div>
-                <p>lorem ipsum</p>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-4 text-center">
-              <div class="event-wrap animate-box">
-                <h3>hotel3</h3>
-                <div class="event-col">
-                  <i class="icon-clock"></i>
-                  <span>14:00</span>
-                  <span></span>
-                </div>
-                <div class="event-col">
-                  <i class="icon-calendar"></i>
-                  <span>pamplona el toro hotel & spa</span>
-                  <span></span>
-                </div>
-                <p>lorem ipsum</p>
-              <!-- </div> -->
-            <!-- </div> -->
+            <p>lorem ipsum</p>
           </div>
         </div>
       </div>
-    </div>
+        <br>
+    </ng-container>
+    
   </div>
 </div>
 <div id="fh5co-gallery" class="fh5co-section-gray">
@@ -640,21 +490,5 @@
   <a href="#" class="js-gotop"> <i><span class="glyphicon glyphicon-arrow-up icon"></span></i>
   </a>
 </div>
-
-
-<script>
-//  var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
-  
-  var d = new Date("Jun 22, 2024 12:00:00");
-
-  console.log("testing countdown")
-  // default example
-  simplyCountdown('.simply-countdown-one', {
-    year: d.getFullYear(),
-    month: d.getMonth() + 1,
-    day: d.getDate()
-  });
-
-</script>
 
 <router-outlet></router-outlet>
