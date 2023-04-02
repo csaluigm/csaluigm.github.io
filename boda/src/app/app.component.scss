@@ -1286,7 +1286,8 @@ figure {
 		border: 2px solid rgba($brand-white, .5);
 		background: rgba($brand-white, .1);
 		padding: 30px;
-		max-height: 279px !important;
+		color:white !important;
+		max-height: 200px !important;
 		width: 100%;
 		float: left;
 		@include border-radius(4px);
@@ -1303,6 +1304,8 @@ figure {
 			padding-bottom: 20px;
 			text-transform: uppercase;
 			letter-spacing: 2px;
+			min-height: 64px;
+			/* vertical-align: middle; */
 		}
 
 		p,
@@ -1990,6 +1993,10 @@ body {
 		}
 	}
 }
+.event-wrap a{
+	color:white;
+	font-size: 14px;
+}
 
 a {
 	color: $brand-primary;
@@ -2573,6 +2580,14 @@ figure {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
+
+.timeline-body span {
+	color: $brand-primary;
+}
+
+/* .timeline-body div{ */
+/* 	color: $brand-primary; */
+/* } */
 
 .timeline-body>p,
 .timeline-body>ul {

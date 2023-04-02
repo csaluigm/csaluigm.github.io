@@ -1,6 +1,8 @@
 <!-- <div class="loader"></div> -->
-<header id="header" class="cover" role="banner"
-  style="background-image:url(assets/images/Fotos/Arco_boda_Carol.jpg);" data-stellar-background-ratio="0.5">
+
+<!-- Header -->
+<header id="header" class="cover" role="banner" style="background-image:url(assets/images/Fotos/Arco_boda_Carol.jpg);"
+  data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -18,12 +20,14 @@
   </div>
 </header>
 
+<!-- Couple Intro -->
 <div id="couple">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center heading animate-box">
         <h2>¡Bienvenidos a nuestra boda!</h2>
-        <h3>22 de junio de 2024, Pamplona, Navarra</h3>
+        <h3>22 de junio de 2024</h3>
+        <h3>Pamplona (Navarra)</h3>
         <p></p>
       </div>
     </div>
@@ -56,6 +60,7 @@
 
 
 <!-- <div id="couple-story" style="background-image:url(/assets/images/img_bg_3.jpg);"> -->
+<!-- Planning-->
 <div id="couple-story" class="gradient">
   <div class="container">
     <div class="row">
@@ -68,51 +73,34 @@
     <div class="row">
       <div class="col-md-12 col-md-offset-0">
         <ul class="timeline animate-box">
-          <li class="animate-box">
-            <div class="timeline-badge" style="background-image:url(/assets/images/Fotos/Capilla_San_Fermin.jpg);">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h3 class="timeline-title">Ceremonia</h3>
-                <span class="date">Iglesia de San Lorenzo (Pamplona)</span>
+          <ng-container *ngFor="let event of planning; let index = index">
+            <li class=" {{index %2 != 0 ? 'timeline-inverted': '' }} animate-box">
+              <div class="timeline-badge" style="background-image:url({{event.image}});">
               </div>
-              <div class="timeline-body">
-                <a href="https://goo.gl/maps/ChYTJQnfXt1Wnn7c9"> <span class="glyphicon glyphicon-map-marker"></span>
-                  Ubicación</a>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">{{event.title}}</h3>
+                  <span class="date">{{event.location}}</span>
+                </div>
+
+                <div *ngIf="event.time !== undefined" class="timeline-body">
+                  <span class="glyphicon glyphicon-time"></span>
+                  {{event.time}}
+                </div>
+                <div class="timeline-body">
+                  <a href="https://goo.gl/maps/ChYTJQnfXt1Wnn7c9"> <span class="glyphicon glyphicon-map-marker"></span>
+                    Ubicación</a>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="timeline-inverted animate-box">
-            <div class="timeline-badge" style="background-image:url(/assets/images/Fotos/Autobus_2.jpg);"></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h3 class="timeline-title">Autobús</h3>
-                <span class="date">Frente a Iglesia de San Lorenzo</span>
-              </div>
-              <div class="timeline-body">
-                <a href="https://goo.gl/maps/ChYTJQnfXt1Wnn7c9"> <span class="glyphicon glyphicon-map-marker"></span>
-                  Ubicación</a>
-              </div>
-            </div>
-          </li>
-          <li class="animate-box">
-            <div class="timeline-badge" style="background-image:url(/assets/images/Fotos/Hotel_El_Toro.jpeg);"></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h3 class="timeline-title">Banquete</h3>
-                <span class="date">Pamplona El Toro Hotel & Spa</span>
-              </div>
-              <div class="timeline-body">
-                <a href="https://goo.gl/maps/ChYTJQnfXt1Wnn7c9"> <span class="glyphicon glyphicon-map-marker"></span>
-                  Ubicación</a>
-              </div>
-            </div>
-          </li>
+            </li>
+          </ng-container>
         </ul>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Alojamiento-->
 <div id="event" class="bg" style="background-image:url(/assets/images/Fotos/ciudadela.jpg);">
   <div class="overlay"></div>
   <div class="container">
@@ -128,23 +116,21 @@
         <div class="col-md-4 col-sm-4 text-center" *ngFor="let h of row; let i = index">
           <div class="event-wrap animate-box">
             <h3>{{h.name}}</h3>
-            <div class="event-col">
-              <i class="icon-clock"></i>
-              <span>11:45</span>
-              <span></span>
+            <div>
+              <a href={{h.website}}> <span class="glyphicon glyphicon-globe"></span>
+                Web</a>
             </div>
-            <div class="event-col">
-              <i class="icon-calendar"></i>
-              <span>Iglesia de San Lorenzo</span>
-              <span></span>
+
+            <div>
+              <a href={{h.link}}> <span class="glyphicon glyphicon-map-marker"></span>
+                Ubicación</a>
             </div>
-            <p>lorem ipsum</p>
           </div>
         </div>
       </div>
-        <br>
+      <br>
     </ng-container>
-    
+
   </div>
 </div>
 <div id="gallery" class="section-gray">
@@ -159,214 +145,23 @@
     <div class="row row-bottom-padded-md">
       <div class="col-md-12">
         <ul id="gallery-list">
-
-          <li class="one-third animate-box" data-animate-effect="fadeIn"
-            style="background-image: url(/assets/images/Fotos/Javea.JPG); ">
-            <a href="/assets/images/gallery-1.jpg">
-              <div class="case-studies-summary">
-                <!-- <span>14 Photos</span> -->
-                <!-- <h2>Two Glas of Juice</h2> -->
-              </div>
-            </a>
-          </li>
-          <li class="one-third animate-box" data-animate-effect="fadeIn"
-            style="background-image: url(/assets/images/Fotos/Yamaguchi.jpg); ">
-            <a href="#" class="color-2">
-              <div class="case-studies-summary">
-                <!-- <span>30 Photos</span> -->
-                <!-- <h2>Timer starts now!</h2> -->
-              </div>
-            </a>
-          </li>
-
-
-          <li class="one-third animate-box" data-animate-effect="fadeIn"
-            style="background-image: url(/assets/images/Fotos/Atardecer_Malvarrosa.jpg); ">
-            <a href="#" class="color-3">
-              <div class="case-studies-summary">
-                <!-- <span>90 Photos</span> -->
-                <!-- <h2>Beautiful sunset</h2> -->
-              </div>
-            </a>
-          </li>
-          <li class="one-third animate-box" data-animate-effect="fadeIn"
-            style="background-image: url(/assets/images/Fotos/Plaza_Reina.jpg); ">
-            <a href="#" class="color-4">
-              <div class="case-studies-summary">
-                <!-- <span>12 Photos</span> -->
-                <!-- <h2>Company's Conference Room</h2> -->
-              </div>
-            </a>
-          </li>
-
-          <li class="one-third animate-box" data-animate-effect="fadeIn"
-            style="background-image: url(/assets/images/Fotos/Bosque_Cuenca.jpg); ">
-            <a href="#" class="color-3">
-              <div class="case-studies-summary">
-                <!-- <span>50 Photos</span> -->
-                <!-- <h2>Useful baskets</h2> -->
-              </div>
-            </a>
-          </li>
-          <li class="one-third animate-box" data-animate-effect="fadeIn"
-            style="background-image: url(/assets/images/Fotos/Altea.jpg); ">
-            <a href="#" class="color-4">
-              <div class="case-studies-summary">
-                <!-- <span>45 Photos</span> -->
-                <!-- <h2>Skater man in the road</h2> -->
-              </div>
-            </a>
-          </li>
-
-          <li class="one-third animate-box" data-animate-effect="fadeIn"
-            style="background-image: url(/assets/images/Fotos/Vinaroz.jpg); ">
-            <a href="#" class="color-4">
-              <div class="case-studies-summary">
-                <!-- <span>35 Photos</span> -->
-                <!-- <h2>Two Glas of Juice</h2> -->
-              </div>
-            </a>
-          </li>
-
-          <li class="one-third animate-box" data-animate-effect="fadeIn"
-            style="background-image: url(/assets/images/Fotos/Viveros.jpg); ">
-            <a href="#" class="color-5">
-              <div class="case-studies-summary">
-                <!-- <span>90 Photos</span> -->
-                <!-- <h2>Timer starts now!</h2> -->
-              </div>
-            </a>
-          </li>
-          <li class="one-third animate-box" data-animate-effect="fadeIn"
-            style="background-image: url(/assets/images/Fotos/Granada.jpg); ">
-            <a href="#" class="color-6">
-              <div class="case-studies-summary">
-                <!-- <span>56 Photos</span> -->
-                <!-- <h2>Beautiful sunset</h2> -->
-              </div>
-            </a>
-          </li>
+          <ng-container *ngFor="let image of images; let index = index">
+            <li class="one-third animate-box" data-animate-effect="fadeIn"
+              style="background-image: url(/assets/images/Fotos/{{image}}); ">
+              <a href="/assets/images/gallery-1.jpg">
+                <div class="case-studies-summary">
+                  <!-- <span>14 Photos</span> -->
+                  <!-- <h2>Two Glas of Juice</h2> -->
+                </div>
+              </a>
+            </li>
+          </ng-container>
         </ul>
       </div>
     </div>
   </div>
 </div>
 
-<!-- <div id="counter" class="bg counter" style="background-image:url(/assets/images/img_bg_3.jpg);">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="display-t">
-        <div class="display-tc">
-          <div class="col-md-3 col-sm-6 animate-box">
-            <div class="feature-center">
-              <span class="icon">
-                <i class="icon-users"></i>
-              </span>
-
-              <span class="counter js-counter" data-from="0" data-to="500" data-speed="5000"
-                data-refresh-interval="50">1</span>
-              <span class="counter-label">Estimated Guest</span>
-
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 animate-box">
-            <div class="feature-center">
-              <span class="icon">
-                <i class="icon-user"></i>
-              </span>
-
-              <span class="counter js-counter" data-from="0" data-to="1000" data-speed="5000"
-                data-refresh-interval="50">1</span>
-              <span class="counter-label">We Catter</span>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 animate-box">
-            <div class="feature-center">
-              <span class="icon">
-                <i class="icon-calendar"></i>
-              </span>
-              <span class="counter js-counter" data-from="0" data-to="402" data-speed="5000"
-                data-refresh-interval="50">1</span>
-              <span class="counter-label">Events Done</span>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 animate-box">
-            <div class="feature-center">
-              <span class="icon">
-                <i class="icon-clock"></i>
-              </span>
-
-              <span class="counter js-counter" data-from="0" data-to="2345" data-speed="5000"
-                data-refresh-interval="50">1</span>
-              <span class="counter-label">Hours Spent</span>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div id="testimonial">
-  <div class="container">
-    <div class="row">
-      <div class="row animate-box">
-        <div class="col-md-8 col-md-offset-2 text-center heading">
-          <span>Best Wishes</span>
-          <h2>Friends Wishes</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 animate-box">
-          <div class="wrap-testimony">
-            <div class="owl-carousel-fullwidth">
-              <div class="item">
-                <div class="testimony-slide active text-center">
-                  <figure>
-                    <img src="/assets/images/couple-1.jpg" alt="user">
-                  </figure>
-                  <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                  <blockquote>
-                    <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                      live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"
-                    </p>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-slide active text-center">
-                  <figure>
-                    <img src="/assets/images/couple-2.jpg" alt="user">
-                  </figure>
-                  <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                  <blockquote>
-                    <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, at the
-                      coast of the Semantics, a large language ocean."</p>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-slide active text-center">
-                  <figure>
-                    <img src="/assets/images/couple-3.jpg" alt="user">
-                  </figure>
-                  <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                  <blockquote>
-                    <p>"Far far away, far from the countries Vokalia and Consonantia, there live the blind texts.
-                      Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
-                      ocean."</p>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 
 <div id="services" class="section-gray">
   <div class="container">
@@ -423,68 +218,9 @@
         </div>
       </div>
     </div>
-
-
   </div>
 </div>
 
-
-<!-- <div id="started" class="bg" style="background-image:url(/assets/images/img_bg_4.jpg);">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row animate-box">
-      <div class="col-md-8 col-md-offset-2 text-center heading">
-        <h2>Are You Attending?</h2>
-        <p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
-      </div>
-    </div>
-    <div class="row animate-box">
-      <div class="col-md-10 col-md-offset-1">
-        <form class="form-inline">
-          <div class="col-md-4 col-sm-4">
-            <div class="form-group">
-              <label for="name" class="sr-only">Name</label>
-              <input type="name" class="form-control" id="name" placeholder="Name">
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="form-group">
-              <label for="email" class="sr-only">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Email">
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <button type="submit" class="btn btn-default btn-block">I am Attending</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- <footer id="footer" role="contentinfo">
-  <div class="container">
-
-    <div class="row copyright">
-      <div class="col-md-12 text-center">
-        <p>
-          <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
-          <small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images:
-            <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
-        </p>
-        <p>
-        <ul class="social-icons">
-          <li><a href="#"><i class="icon-twitter"></i></a></li>
-          <li><a href="#"><i class="icon-facebook"></i></a></li>
-          <li><a href="#"><i class="icon-linkedin"></i></a></li>
-          <li><a href="#"><i class="icon-dribbble"></i></a></li>
-        </ul>
-        </p>
-      </div>
-    </div>
-
-  </div>
-</footer> -->
 
 <div class="gototop js-top">
   <a href="#" class="js-gotop"> <i><span class="glyphicon glyphicon-arrow-up icon"></span></i>

@@ -1,0 +1,1 @@
+export var images = [ 'Javea.JPG','Yamaguchi.jpg','Atardecer_Malvarrosa.jpg','Plaza_Reina.jpg','Bosque_Cuenca.jpg','Altea.jpg','Vinaroz.jpg','Viveros.jpg','Granada.jpg' ]
