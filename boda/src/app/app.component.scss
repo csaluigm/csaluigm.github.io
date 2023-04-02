@@ -23,6 +23,8 @@ $gray-light: lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
 
 $babel-mint: #7e9a84;
+$light-babel-mint: #E5EAE6;
+
 // $brand-primary: darken(#428bca, 6.5%) !default; // #337ab7
 $brand-primary: $babel-mint;
 
@@ -1296,6 +1298,13 @@ figure {
 			margin-bottom: 10px;
 		}
 
+		a{
+			padding:10px;
+			/* background:red; */
+			width:100%;
+			font-size: 18px;
+		}
+
 		h3 {
 			font-size: 20px;
 			color: $brand-white;
@@ -1310,14 +1319,17 @@ figure {
 
 		p,
 		span {
-			display: block;
+			/* width:20px; */
+			/* display: block; */
+			/* text-align:left; */
+			font-size: 18px;
 			color: rgba($brand-white, .8);
 		}
 
-		i {
-			color: rgba($brand-white, 1);
-			font-size: 20px;
-		}
+		/* i { */
+		/* 	color: rgba($brand-white, 1); */
+		/* 	font-size: 20px; */
+		/* } */
 
 		.event-col {
 			width: 50%;
@@ -2477,6 +2489,7 @@ figure {
 		}
 
 		>.timeline-panel {
+			background:$light-babel-mint;
 			width: 40%;
 			float: left;
 			border: 1px solid #d4d4d4;
