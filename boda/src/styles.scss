@@ -1,0 +1,62 @@
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+.simply-countdown > .simply-section {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: rgba(241, 78, 149, .8) !important;
+	// background: rgba($brand-primary, .8);
+	margin: 0 4px;
+	@include border-radius(50%);
+	position: relative;
+
+	animation: pulse 1s ease infinite,
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.05);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.simply-section {
+	font-size: 20px;
+}
+
+.simply-countdown > .simply-section>div {
+	/* countdown block inner div */
+	display: table-cell;
+	vertical-align: middle;
+	height: 100px;
+	width: 100px;
+}
+
+.simply-countdown>.simply-section .simply-amount,
+.simply-countdown>.simply-section .simply-word {
+	display: block;
+	color: rgba(white, 1);
+}
+
+.simply-countdown>.simply-section .simply-amount {
+	font-size: 30px;
+}
+
+.simply-countdown>.simply-section .simply-word {
+	// color: rgba($brand-white, .7);
+	text-transform: uppercase;
+	font-size: 20px;
+}

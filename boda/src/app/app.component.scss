@@ -1,16 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+body {
 	overflow-x: hidden !important;
 }
+
 $bootstrap-sass-asset-helper: false !default;
 //
 // Variables
 // --------------------------------------------------
 
-.gradient{
+.gradient {
 	background: rgb(239, 210, 220);
-//  background: linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(144,228,162,1) 100%);
+	//  background: linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(144,228,162,1) 100%);
 }
+
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -1097,43 +1099,50 @@ figure {
 	}
 }
 
-@media (min-width:320px)  {
-	/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+@media (min-width:320px) {
+	/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
 
-	.bg{
-		background-image:url(/assets/images/Fotos/bosque.jpg);
-		}
+	.bg {
+		background-image: url(/assets/images/Fotos/bosque.jpg);
 	}
-@media (min-width:480px)  { 
-	/* smartphones, Android phones, landscape iPhone */ 
+}
 
-	.bg{
-		background-image:url(/assets/images/Fotos/bosque.jpg);
-		}
+@media (min-width:480px) {
+	/* smartphones, Android phones, landscape iPhone */
+
+	.bg {
+		background-image: url(/assets/images/Fotos/bosque.jpg);
 	}
-@media (min-width:600px)  {
-	/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
-	.bg{
-		background-image:url(/assets/images/Fotos/bosque.jpg);
-		}
+}
+
+@media (min-width:600px) {
+
+	/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+	.bg {
+		background-image: url(/assets/images/Fotos/bosque.jpg);
 	}
+}
 
 
-@media (min-width:801px)  {
-	/* tablet, landscape iPad, lo-res laptops ands desktops */ 
-	.bg{
-		background-image:url(/assets/images/Fotos/bosque.jpg);
-		}
+@media (min-width:801px) {
+
+	/* tablet, landscape iPad, lo-res laptops ands desktops */
+	.bg {
+		background-image: url(/assets/images/Fotos/bosque.jpg);
 	}
+}
 
 @media (min-width:1025px) {
-	/* big landscape tablets, laptops, and desktops */ 
-	.bg{
-		background-image:url(/assets/images/Fotos/ciudadela.jpg);
-		}
-	}
 
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+	/* big landscape tablets, laptops, and desktops */
+	.bg {
+		background-image: url(/assets/images/Fotos/ciudadela.jpg);
+	}
+}
+
+@media (min-width:1281px) {
+	/* hi-res laptops and desktops */
+}
 
 // #header,
 // #counter,
@@ -1326,7 +1335,7 @@ figure {
 		border: 2px solid rgba($brand-white, .5);
 		background: rgba($brand-white, .1);
 		padding: 30px;
-		color:white !important;
+		color: white !important;
 		max-height: 200px !important;
 		width: 100%;
 		float: left;
@@ -1336,10 +1345,10 @@ figure {
 			margin-bottom: 10px;
 		}
 
-		a{
-			padding:10px;
+		a {
+			padding: 10px;
 			/* background:red; */
-			width:100%;
+			width: 100%;
 			font-size: 18px;
 		}
 
@@ -2043,8 +2052,9 @@ body {
 		}
 	}
 }
-.event-wrap a{
-	color:white;
+
+.event-wrap a {
+	color: white;
 	font-size: 14px;
 }
 
@@ -2261,6 +2271,7 @@ figure {
 	background-repeat: no-repeat;
 	position: relative;
 }
+
 #counter,
 #event,
 .bg {
@@ -2527,7 +2538,7 @@ figure {
 		}
 
 		>.timeline-panel {
-			background:$light-babel-mint;
+			background: $light-babel-mint;
 			width: 40%;
 			float: left;
 			border: 1px solid #d4d4d4;
@@ -2990,18 +3001,22 @@ form {
 }
 
 
-// COUNTDOWN CUSTOM
 .simply-countdown {
-	/* The countdown */
 	margin-bottom: 2em;
+	// background-color: red;
+	opacity: .8;
 }
 
-.simply-countdown>.simply-section {
-	/* coutndown blocks */
+div .simply-section{
+	background-color: yellow;
+}
+
+.simply-countdown > .simply-section {
 	display: inline-block;
 	width: 100px;
 	height: 100px;
-	background: rgba($brand-primary, .8);
+	background-color: rgba(241, 78, 149, .8) !important;
+	// background: rgba($brand-primary, .8);
 	margin: 0 4px;
 	@include border-radius(50%);
 	position: relative;
@@ -3023,7 +3038,11 @@ form {
 	}
 }
 
-.simply-countdown>.simply-section>div {
+.simply-section {
+	font-size: 20px;
+}
+
+.simply-countdown > .simply-section>div {
 	/* countdown block inner div */
 	display: table-cell;
 	vertical-align: middle;
@@ -3035,19 +3054,16 @@ form {
 .simply-countdown>.simply-section .simply-word {
 	display: block;
 	color: rgba($brand-white, 1);
-	/* amounts and words */
 }
 
 .simply-countdown>.simply-section .simply-amount {
 	font-size: 30px;
-	/* amounts */
 }
 
 .simply-countdown>.simply-section .simply-word {
-	color: rgba($brand-white, .7);
+	// color: rgba($brand-white, .7);
 	text-transform: uppercase;
-	font-size: 12px;
-	/* words */
+	font-size: 20px;
 }
 
 #testimonial,

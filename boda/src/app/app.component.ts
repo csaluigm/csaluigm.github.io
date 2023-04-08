@@ -3,8 +3,6 @@ import { hotelGroups } from './hotels';
 import { planning } from './planning';
 import { images } from './images';
 
-/* import { planning,mainText } from './planning'; */
-
 declare var simplyCountdown: any;
 declare var $: any;
 
