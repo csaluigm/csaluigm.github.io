@@ -1361,7 +1361,7 @@ figure {
 			text-transform: uppercase;
 			letter-spacing: 2px;
 			min-height: 64px;
-			/* vertical-align: middle; */
+			vertical-align: middle;
 		}
 
 		p,
@@ -1396,65 +1396,69 @@ figure {
 	}
 }
 
+// #counter .display-tc,#header .display-tc,.cover .display-tc {
+//     display: table-cell!important;
+//     vertical-align: middle;
+// }
 
 
-#header,
-#counter,
-.cover {
-	.display-tc {
-		display: table-cell !important;
-		vertical-align: middle;
+// #header,
+// #counter,
+// .cover {
+// 	.display-tc {
+// 		display: table-cell !important;
+// 		vertical-align: bottom;
 
-		h1,
-		h2 {
-			margin: 0;
-			padding: 0;
-			color: rgba(255, 255, 255, 1);
-		}
+// 		h1,
+// 		h2 {
+// 			margin: 0;
+// 			padding: 0;
+// 			color: rgba(255, 255, 255, 1);
+// 		}
 
-		h1 {
-			margin-bottom: 0px;
-			font-size: 100px;
-			line-height: 1.5;
-			font-family: $font-secondary;
+// 		h1 {
+// 			margin-bottom: 0px;
+// 			font-size: 100px;
+// 			line-height: 1.5;
+// 			font-family: $font-secondary;
 
-			@media screen and (max-width: $screen-sm) {
-				font-size: 40px;
-			}
+// 			@media screen and (max-width: $screen-sm) {
+// 				font-size: 40px;
+// 			}
 
-			@media screen and (max-width: $screen-xs) {
-				font-size: 30px;
-			}
-		}
+// 			@media screen and (max-width: $screen-xs) {
+// 				font-size: 30px;
+// 			}
+// 		}
 
-		h2 {
-			font-size: 20px;
-			line-height: 1.5;
-			margin-bottom: 30px;
+// 		h2 {
+// 			font-size: 20px;
+// 			line-height: 1.5;
+// 			margin-bottom: 30px;
 
-			@media screen and (max-width: $screen-xs) {
-				font-size: 16px;
-			}
-		}
+// 			@media screen and (max-width: $screen-xs) {
+// 				font-size: 16px;
+// 			}
+// 		}
 
-		.btn {
-			padding: 15px 20px;
-			background: $brand-white !important;
-			color: $brand-primary;
-			border: none !important;
-			font-size: 14px;
-			text-transform: uppercase;
+// 		.btn {
+// 			padding: 15px 20px;
+// 			background: $brand-white !important;
+// 			color: $brand-primary;
+// 			border: none !important;
+// 			font-size: 14px;
+// 			text-transform: uppercase;
 
-			// @include border-radius(2px);
-			&:hover {
-				background: $brand-white !important;
-				-webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
-				-moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
-				box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
-			}
-		}
-	}
-}
+// 			// @include border-radius(2px);
+// 			&:hover {
+// 				background: $brand-white !important;
+// 				-webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
+// 				-moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
+// 				box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
+// 			}
+// 		}
+// 	}
+// }
 
 #counter {
 	text-align: center;
@@ -2262,7 +2266,9 @@ figure {
 	}
 }
 
-// #header,
+#header{
+	background-position: 0px 200px;
+}
 // #counter,
 // #event,
 .bg {
@@ -2348,7 +2354,7 @@ figure {
 }
 
 .cover {
-	height: 900px;
+	height: 930px;
 	background-size: cover;
 	// background-position: center center;
 	background-repeat: no-repeat;
@@ -2376,7 +2382,7 @@ figure {
 
 	.display-t,
 	.display-tc {
-		height: 900px;
+		height: 930px;
 		display: table;
 		width: 100%;
 
@@ -2901,7 +2907,7 @@ form {
 .cover {
 	.display-tc {
 		display: table-cell !important;
-		vertical-align: top;
+		vertical-align: bottom;
 
 		h1,
 		h2 {
@@ -2911,7 +2917,7 @@ form {
 		}
 
 		h1 {
-			padding-bottom: 80px;
+			padding-bottom: 30px;
 			margin-bottom: 0px;
 			font-size: 100px;
 			line-height: 1.5;
@@ -2927,9 +2933,10 @@ form {
 		}
 
 		h2 {
-			font-size: 20px;
+			font-size: 45px;
 			line-height: 1.5;
-			margin-bottom: 30px;
+			margin-bottom: 45px;
+			color: white;
 
 			@media screen and (max-width: $screen-xs) {
 				font-size: 16px;
@@ -3002,16 +3009,16 @@ form {
 
 
 .simply-countdown {
-	margin-bottom: 2em;
+	margin-bottom: 10em;
 	// background-color: red;
 	opacity: .8;
 }
 
-div .simply-section{
+div .simply-section {
 	background-color: yellow;
 }
 
-.simply-countdown > .simply-section {
+.simply-countdown>.simply-section {
 	display: inline-block;
 	width: 100px;
 	height: 100px;
@@ -3042,7 +3049,7 @@ div .simply-section{
 	font-size: 20px;
 }
 
-.simply-countdown > .simply-section>div {
+.simply-countdown>.simply-section>div {
 	/* countdown block inner div */
 	display: table-cell;
 	vertical-align: middle;

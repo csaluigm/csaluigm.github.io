@@ -84,6 +84,7 @@
 
 	var contentWayPoint = function() {
 		var i = 0;
+		console.log("**ANIMATE***")
 		$('.animate-box').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('animated-fast') ) {
@@ -193,10 +194,10 @@
 		parallax();
 		// offcanvasMenu();
 		burgerMenu();
-		contentWayPoint();
+		// contentWayPoint();
 		dropdown();
 		testimonialCarousel();
-		goToTop();
+		// goToTop();
 		loaderPage();
 		counter();
 		counterWayPoint();

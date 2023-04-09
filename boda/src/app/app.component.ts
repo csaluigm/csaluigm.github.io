@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { hotelGroups } from './hotels';
 import { planning } from './planning';
 import { images } from './images';
+import * as Aos from 'aos';
 
 declare var simplyCountdown: any;
 declare var $: any;
@@ -15,14 +16,19 @@ export class AppComponent implements OnInit {
   hotelGroups =  hotelGroups;
   planning =  planning;
   images =  images;
+  Aos = Aos;
   gallery =[]
 
   ngOnInit(): void {
     this.setCountdown()
     this.parallax()
     this.goToTop()
+	this.Aos.init();
   }
 
+  getSide(index:number){
+	return index%2 != 0 ? "fade-left":"fade-right";
+  }
 	goToTop() {
 
 		$('.js-gotop').on('click', (event:any) =>{

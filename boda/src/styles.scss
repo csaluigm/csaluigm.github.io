@@ -1,3 +1,28 @@
+@import 'assets/css/animate.css';
+
+html {
+	--scrollbarBG: #CFD8DC;
+	--thumbBG: #90A4AE;
+}
+
+body::-webkit-scrollbar {
+	width: 11px;
+}
+
+body {
+	scrollbar-width: thin;
+	scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+	background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: var(--thumbBG);
+	border-radius: 6px;
+	border: 3px solid var(--scrollbarBG);
+}
 
 @mixin border-radius($radius) {
 	-webkit-border-radius: $radius;
@@ -6,7 +31,69 @@
 	border-radius: $radius;
 }
 
-.simply-countdown > .simply-section {
+$screen-sm: 768px !default;
+
+.cover {
+	height: 900px;
+	background-size: cover;
+	// background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 100%;
+
+	.overlay {
+		z-index: 0;
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0, 0, 0, .5);
+	}
+
+	>.container {
+		position: relative;
+		z-index: 10;
+	}
+
+	@media screen and (max-width: $screen-sm) {
+		height: 600px;
+	}
+
+	.display-t,
+	.display-tc {
+		// background-color: red;
+		height: 900px;
+		display: table;
+		width: 100%;
+
+		@media screen and (max-width: $screen-sm) {
+			height: 600px;
+		}
+	}
+
+	&.cover-sm {
+		height: 600px;
+
+		@media screen and (max-width: $screen-sm) {
+			height: 400px;
+		}
+
+		.display-t,
+		.display-tc {
+			height: 600px;
+			display: table;
+			width: 100%;
+
+			@media screen and (max-width: $screen-sm) {
+				height: 400px;
+			}
+		}
+	}
+}
+
+
+.simply-countdown>.simply-section {
 	display: inline-block;
 	width: 100px;
 	height: 100px;
@@ -37,7 +124,7 @@
 	font-size: 20px;
 }
 
-.simply-countdown > .simply-section>div {
+.simply-countdown>.simply-section>div {
 	/* countdown block inner div */
 	display: table-cell;
 	vertical-align: middle;
