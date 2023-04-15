@@ -2354,7 +2354,7 @@ figure {
 }
 
 .cover {
-	height: 930px;
+	height: 100vh;
 	background-size: cover;
 	// background-position: center center;
 	background-repeat: no-repeat;
@@ -2570,8 +2570,8 @@ figure {
 				right: -14px;
 				display: inline-block;
 				border-top: 14px solid transparent;
-				border-left: 14px solid #fff;
-				border-right: 0 solid #fff;
+				border-left: 14px solid $babel-mint;
+				border-right: 0 solid $babel-mint;
 				border-bottom: 14px solid transparent;
 				content: " ";
 			}
@@ -2639,18 +2639,25 @@ figure {
 
 .timeline-title {
 	margin-top: 0;
+	color: #5d5d5d;
+	font-weight: bold;
 }
 
 .date {
 	display: block;
 	margin-bottom: 20px;
-	font-size: 13px;
+	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
 
 .timeline-body span {
 	color: $brand-primary;
+}
+
+.timeline-body {
+	font-size: 16px;
+	color: #5d5d5d;
 }
 
 /* .timeline-body div{ */

@@ -7,18 +7,25 @@ export var planning = [
     image: '/assets/images/Fotos/Capilla_San_Fermin.jpg'
   },
   {
-    title: 'Autobús',
+    title: 'Autobús de ida',
     location: 'Frente a Iglesia de San Lorenzo',
     time: '11:45',
     link: 'https://goo.gl/maps/ChYTJQnfXt1Wnn7c9',
     image: '/assets/images/Fotos/Autobus_2.jpg'
   },
   {
-    title: 'Banquete',
+    title: 'Cocktail, banquete y fiesta',
     location: 'PAMPLONA EL TORO HOTEL & SPA',
     time: '11:45',
     link: 'https://maps.app.goo.gl/WsqXbJX519xAfMT9A',
     image: '/assets/images/Fotos/Hotel_El_Toro.jpeg'
+  },
+  {
+    title: 'Autobús de vuelta',
+    location: 'PAMPLONA EL TORO HOTEL & SPA',
+    time: '22:00',
+    link: 'https://maps.app.goo.gl/WsqXbJX519xAfMT9A',
+    image: '/assets/images/Fotos/autobus-noche.jpg'
   }
 ]
 

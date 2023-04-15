@@ -124,8 +124,8 @@
                 words: {
                     days: 'día',
                     hours: 'hora',
-                    minutes: 'minuto',
-                    seconds: 'segundo',
+                    minutes: 'min',
+                    seconds: 'seg',
                     pluralLetter: 's'
                 },
                 plural: true,
