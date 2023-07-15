@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
 			$('html, body').animate({
 				scrollTop: $('html').offset().top
 			}, 500, 'easeInOutExpo');
-			
+
 			return false;
 		});
 
@@ -51,7 +51,7 @@ export class AppComponent implements OnInit {
 			}
 
 		});
-	
+
 	};
 
 	parallax() {
@@ -69,9 +69,9 @@ export class AppComponent implements OnInit {
 	// counterWayPoint() {
 	// 	if ($('#fh5co-counter').length > 0 ) {
 	// 		$('#fh5co-counter').waypoint( ( direction:any )=> {
-	// 									
+	//
 	// 			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-	// 				setTimeout( this.counter , 400);					
+	// 				setTimeout( this.counter , 400);
 	// 				$(this.element).addClass('animated');
 	// 			}
 	// 		} , { offset: '90%' } );
@@ -79,7 +79,7 @@ export class AppComponent implements OnInit {
 	// };
   //
   setCountdown(): void {
-    var d = new Date("Jun 22, 2024 12:00:00");
+    var d = new Date("Jun 22, 2024 11:45:00");
 
     simplyCountdown('.simply-countdown-one', {
       year: d.getFullYear(),

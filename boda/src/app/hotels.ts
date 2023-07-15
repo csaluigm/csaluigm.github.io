@@ -54,4 +54,4 @@ export var hotelGroups = [
             link: 'https://maps.app.goo.gl/GLKDfLSKcmaGcUPv5'
         },
     ]
-]  
+]

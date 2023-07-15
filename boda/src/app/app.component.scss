@@ -848,7 +848,7 @@ transform: translateX($translatex);
 
 }
 
-// Import 
+// Import
 // @import 'bootstrap/mixins';
 // @import 'bootstrap/variables';
 
@@ -857,7 +857,7 @@ transform: translateX($translatex);
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 
@@ -1228,63 +1228,6 @@ figure {
 	}
 }
 
-.cover {
-	height: 900px;
-	background-size: cover;
-	// background-position: center center;
-	background-repeat: no-repeat;
-	position: relative;
-	width: 100%;
-
-	.overlay {
-		z-index: 0;
-		position: absolute;
-		bottom: 0;
-		top: 0;
-		left: 0;
-		right: 0;
-		background: rgba(0, 0, 0, .5);
-	}
-
-	>.container {
-		position: relative;
-		z-index: 10;
-	}
-
-	@media screen and (max-width: $screen-sm) {
-		height: 600px;
-	}
-
-	.display-t,
-	.display-tc {
-		height: 900px;
-		display: table;
-		width: 100%;
-
-		@media screen and (max-width: $screen-sm) {
-			height: 600px;
-		}
-	}
-
-	&.cover-sm {
-		height: 600px;
-
-		@media screen and (max-width: $screen-sm) {
-			height: 400px;
-		}
-
-		.display-t,
-		.display-tc {
-			height: 600px;
-			display: table;
-			width: 100%;
-
-			@media screen and (max-width: $screen-sm) {
-				height: 400px;
-			}
-		}
-	}
-}
 
 #counter,
 #event {
@@ -1396,69 +1339,6 @@ figure {
 	}
 }
 
-// #counter .display-tc,#header .display-tc,.cover .display-tc {
-//     display: table-cell!important;
-//     vertical-align: middle;
-// }
-
-
-// #header,
-// #counter,
-// .cover {
-// 	.display-tc {
-// 		display: table-cell !important;
-// 		vertical-align: bottom;
-
-// 		h1,
-// 		h2 {
-// 			margin: 0;
-// 			padding: 0;
-// 			color: rgba(255, 255, 255, 1);
-// 		}
-
-// 		h1 {
-// 			margin-bottom: 0px;
-// 			font-size: 100px;
-// 			line-height: 1.5;
-// 			font-family: $font-secondary;
-
-// 			@media screen and (max-width: $screen-sm) {
-// 				font-size: 40px;
-// 			}
-
-// 			@media screen and (max-width: $screen-xs) {
-// 				font-size: 30px;
-// 			}
-// 		}
-
-// 		h2 {
-// 			font-size: 20px;
-// 			line-height: 1.5;
-// 			margin-bottom: 30px;
-
-// 			@media screen and (max-width: $screen-xs) {
-// 				font-size: 16px;
-// 			}
-// 		}
-
-// 		.btn {
-// 			padding: 15px 20px;
-// 			background: $brand-white !important;
-// 			color: $brand-primary;
-// 			border: none !important;
-// 			font-size: 14px;
-// 			text-transform: uppercase;
-
-// 			// @include border-radius(2px);
-// 			&:hover {
-// 				background: $brand-white !important;
-// 				-webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
-// 				-moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
-// 				box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
-// 			}
-// 		}
-// 	}
-// }
 
 #counter {
 	text-align: center;
@@ -1528,7 +1408,7 @@ figure {
 
 
 
-// Owl 
+// Owl
 .owl-carousel .owl-controls .owl-dot {
 	span {
 		background: lighten($brand-black, 90%);
@@ -2010,7 +1890,7 @@ $form-group-margin-bottom: 30px !default;
 
 }
 
-// Import 
+// Import
 // @import 'bootstrap/mixins';
 // @import 'bootstrap/variables';
 
@@ -2019,7 +1899,7 @@ $form-group-margin-bottom: 30px !default;
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 
@@ -2267,7 +2147,7 @@ figure {
 }
 
 #header{
-	background-position: 0px 200px;
+	// background-position: 0px 200px;
 }
 // #counter,
 // #event,
@@ -2275,7 +2155,7 @@ figure {
 	background-size: cover;
 	background-position: top center;
 	background-repeat: no-repeat;
-	position: relative;
+	// position: relative;
 }
 
 #counter,
@@ -2354,7 +2234,7 @@ figure {
 }
 
 .cover {
-	height: 100vh;
+	height: auto;
 	background-size: cover;
 	// background-position: center center;
 	background-repeat: no-repeat;
@@ -2376,19 +2256,20 @@ figure {
 		z-index: 10;
 	}
 
-	@media screen and (max-width: $screen-sm) {
-		height: 600px;
-	}
+	// @media screen and (max-width: $screen-sm) {
+	// 	height: 600px;
+	// }
 
 	.display-t,
 	.display-tc {
-		height: 930px;
+	  margin-top:28vw;
+		height: auto;
 		display: table;
 		width: 100%;
 
-		@media screen and (max-width: $screen-sm) {
-			height: 600px;
-		}
+		// @media screen and (max-width: $screen-sm) {
+		// 	height: 600px;
+		// }
 	}
 
 	&.cover-sm {
@@ -2820,7 +2701,7 @@ figure {
 // Map
 #map {
 	width: 100%;
-	height: 500px;
+	// height: 500px;
 	position: relative;
 
 	@media screen and (max-width: $screen-sm) {
@@ -3034,7 +2915,6 @@ div .simply-section {
 	margin: 0 4px;
 	@include border-radius(50%);
 	position: relative;
-
 	animation: pulse 1s ease infinite,
 }
 
@@ -3052,18 +2932,22 @@ div .simply-section {
 	}
 }
 
+.simply-countdown{
+	@media screen and (max-width: $screen-sm) {
+	  // background-color:yellow;
+	}
+}
 .simply-section {
 	font-size: 20px;
 }
 
-.simply-countdown>.simply-section>div {
-	/* countdown block inner div */
-	display: table-cell;
-	vertical-align: middle;
-	height: 100px;
-	width: 100px;
-}
-
+// .simply-countdown .simply-section div {
+// 	@media screen and (max-width: $screen-sm) {
+// 	  background-color:green;
+// 		height: 50px;
+// 		width: 50px;
+// 	}
+// }
 .simply-countdown>.simply-section .simply-amount,
 .simply-countdown>.simply-section .simply-word {
 	display: block;
@@ -3538,7 +3422,7 @@ div .simply-section {
 	}
 }
 
-// Owl 
+// Owl
 .owl-carousel .owl-controls .owl-dot {
 	span {
 		background: lighten($brand-black, 90%);
