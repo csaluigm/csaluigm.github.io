@@ -125,6 +125,12 @@ $screen-xs: 480px !default;
 	font-size: 20px;
 }
 
+#header{
+  @media screen and (max-width: $screen-sm) {
+    // background-position: -120px 0px;
+  }
+}
+
 .simply-countdown>.simply-section {
 
 	@media screen and (max-width: $screen-sm) {
