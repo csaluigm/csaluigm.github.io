@@ -10,83 +10,83 @@ declare var $: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  hotelGroups =  hotelGroups;
-  planning =  planning;
-  images =  images;
+  hotelGroups = hotelGroups;
+  planning = planning;
+  images = images;
   Aos = Aos;
-  gallery =[]
+  gallery = [];
 
   ngOnInit(): void {
-    this.setCountdown()
-    this.parallax()
-    this.goToTop()
-	this.Aos.init();
+    this.setCountdown();
+    this.parallax();
+    this.goToTop();
+    this.Aos.init();
   }
 
-  getSide(index:number){
-	return index%2 != 0 ? "fade-left":"fade-right";
+  getSide(index: number) {
+    return index % 2 != 0 ? 'fade-left' : 'fade-right';
   }
-	goToTop() {
 
-		$('.js-gotop').on('click', (event:any) =>{
-			event.preventDefault();
+  goToTop() {
+    $('.js-gotop').on('click', (event: any) => {
+      event.preventDefault();
 
-			$('html, body').animate({
-				scrollTop: $('html').offset().top
-			}, 500, 'easeInOutExpo');
+      $('html, body').animate(
+        {
+          scrollTop: $('html').offset().top,
+        },
+        500,
+        'easeInOutExpo',
+      );
 
-			return false;
-		});
+      return false;
+    });
 
-		$(window).scroll(function(){
+    $(window).scroll(function () {
+      var $win = $(window);
+      if ($win.scrollTop() > 200) {
+        $('.js-top').addClass('active');
+      } else {
+        $('.js-top').removeClass('active');
+      }
+    });
+  }
 
-			var $win = $(window);
-			if ($win.scrollTop() > 200) {
-				$('.js-top').addClass('active');
-			} else {
-				$('.js-top').removeClass('active');
-			}
+  parallax() {
+    // $(window).stellar();
+    $(window).stellar({ horizontalScrolling: false });
+  }
 
-		});
+  counter() {
+    $('.js-counter').countTo({
+      formatter: (value: any, options: any) => {
+        return value.toFixed(options.decimals);
+      },
+    });
+  }
 
-	};
-
-	parallax() {
-		$(window).stellar();
-	};
-
-	counter() {
-		$('.js-counter').countTo({
-			 formatter: (value:any, options:any) =>{
-	      return value.toFixed(options.decimals);
-	    },
-		});
-	};
-
-	// counterWayPoint() {
-	// 	if ($('#fh5co-counter').length > 0 ) {
-	// 		$('#fh5co-counter').waypoint( ( direction:any )=> {
-	//
-	// 			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-	// 				setTimeout( this.counter , 400);
-	// 				$(this.element).addClass('animated');
-	// 			}
-	// 		} , { offset: '90%' } );
-	// 	}
-	// };
+  // counterWayPoint() {
+  // 	if ($('#fh5co-counter').length > 0 ) {
+  // 		$('#fh5co-counter').waypoint( ( direction:any )=> {
+  //
+  // 			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+  // 				setTimeout( this.counter , 400);
+  // 				$(this.element).addClass('animated');
+  // 			}
+  // 		} , { offset: '90%' } );
+  // 	}
+  // };
   //
   setCountdown(): void {
-    var d = new Date("Jun 22, 2024 11:45:00");
+    var d = new Date('Jun 22, 2024 11:45:00');
 
     simplyCountdown('.simply-countdown-one', {
       year: d.getFullYear(),
       month: d.getMonth() + 1,
-      day: d.getDate()
+      day: d.getDate(),
     });
-
   }
-
 }

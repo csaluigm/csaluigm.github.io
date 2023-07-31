@@ -1,200 +1,211 @@
-@import 'assets/css/animate.css';
+@import "assets/css/animate.css";
 
 html {
-	--scrollbarBG: #CFD8DC;
-	--thumbBG: #90A4AE;
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #90a4ae;
 }
 
 body::-webkit-scrollbar {
-	width: 11px;
+  width: 11px;
 }
 
 body {
-	scrollbar-width: thin;
-	scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
 
 body::-webkit-scrollbar-track {
-	background: var(--scrollbarBG);
+  background: var(--scrollbarBG);
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: var(--thumbBG);
-	border-radius: 6px;
-	border: 3px solid var(--scrollbarBG);
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
 }
 
 @mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
 }
 
 $screen-sm: 768px !default;
 $screen-xs: 480px !default;
 
 .cover {
-	height: 900px;
-	background-size: cover;
-	// background-position: center center;
-	background-repeat: no-repeat;
-	position: relative;
-	width: 100%;
+  height: 900px;
+  background-size: cover;
+  // background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
 
-	.overlay {
-		z-index: 0;
-		position: absolute;
-		bottom: 0;
-		top: 0;
-		left: 0;
-		right: 0;
-		background: rgba(0, 0, 0, .5);
-	}
+  .overlay {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
 
-	>.container {
-		position: relative;
-		z-index: 10;
-	}
+  > .container {
+    position: relative;
+    z-index: 10;
+  }
 
-	@media screen and (max-width: $screen-sm) {
-		height: 600px;
-	}
+  @media screen and (max-width: $screen-sm) {
+    height: 600px;
+  }
 
-	.display-t,
-	.display-tc {
-		// background-color: red;
-		height: 900px;
-		display: table;
-		width: 100%;
+  .display-t,
+  .display-tc {
+    // background-color: red;
+    height: 900px;
+    display: table;
+    width: 100%;
+    word-break: keep-all;
 
-		@media screen and (max-width: $screen-sm) {
-			height: 600px;
-		}
-	}
+    @media screen and (max-width: $screen-sm) {
+      height: 600px;
+    }
+  }
 
-	&.cover-sm {
-		height: 600px;
+  &.cover-sm {
+    height: 600px;
 
-		@media screen and (max-width: $screen-sm) {
-			height: 400px;
-		}
+    @media screen and (max-width: $screen-sm) {
+      height: 400px;
+    }
 
-		.display-t,
-		.display-tc {
-			height: 600px;
-			display: table;
-			width: 100%;
+    .display-t,
+    .display-tc {
+      height: 600px;
+      display: table;
+      width: 100%;
 
-			@media screen and (max-width: $screen-sm) {
-				height: 400px;
-			}
-		}
-	}
+      @media screen and (max-width: $screen-sm) {
+        height: 400px;
+      }
+    }
+  }
 }
 
+.simply-countdown > .simply-section {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(241, 78, 149, 0.8) !important;
+  // background: rgba($brand-primary, .8);
+  margin: 0 4px;
+  @include border-radius(50%);
+  position: relative;
 
-.simply-countdown>.simply-section {
-	display: inline-block;
-	width: 100px;
-	height: 100px;
-	background-color: rgba(241, 78, 149, .8) !important;
-	// background: rgba($brand-primary, .8);
-	margin: 0 4px;
-	@include border-radius(50%);
-	position: relative;
-
-	animation: pulse 1s ease infinite,
+  animation: pulse 1s ease infinite;
 }
 
 @keyframes pulse {
-	0% {
-		transform: scale(1);
-	}
+  0% {
+    transform: scale(1);
+  }
 
-	50% {
-		transform: scale(1.05);
-	}
+  50% {
+    transform: scale(1.05);
+  }
 
-	100% {
-		transform: scale(1);
-	}
+  100% {
+    transform: scale(1);
+  }
 }
 
 .simply-section {
-	font-size: 20px;
+  font-size: 20px;
 }
 
-#header{
+#header {
   @media screen and (max-width: $screen-sm) {
     // background-position: -120px 0px;
   }
 }
 
-.simply-countdown>.simply-section {
+.simply-countdown {
+  @media screen and (min-width: $screen-sm) {
+    margin-bottom: 10em;
+  }
+  @media screen and (max-width: $screen-sm) {
+    margin-bottom: 5em;
+  }
 
-	@media screen and (max-width: $screen-sm) {
-		height: 80px;
-		width: 80px;
-	}
-
-	@media screen and (max-width: $screen-xs) {
-		height: 50px;
-		width: 50px;
-	}
+  @media screen and (max-width: $screen-xs) {
+    margin-bottom: 3em;
+  }
 }
 
-.simply-amount{
-	@media screen and (max-width: $screen-sm) {
-		font-size: 20px;
-	}
+.simply-countdown > .simply-section {
+  @media screen and (max-width: $screen-sm) {
+    height: 80px;
+    width: 80px;
+  }
 
-	@media screen and (max-width: $screen-xs) {
-		font-size: 15px;
-	}
+  @media screen and (max-width: $screen-xs) {
+    height: 50px;
+    width: 50px;
+  }
 }
 
-.simply-word{
-	@media screen and (max-width: $screen-sm) {
-		font-size: 20px;
-		background-color:blue;
-	}
+.simply-amount {
+  @media screen and (max-width: $screen-sm) {
+    font-size: 20px;
+  }
 
-	@media screen and (max-width: $screen-xs) {
-		font-size: 10px;
-		background-color:black;
-	}
-}
-.simply-countdown>.simply-section>div {
-
-	@media screen and (max-width: $screen-sm) {
-		height: 80px;
-		width: 80px;
-	}
-
-	@media screen and (max-width: $screen-xs) {
-		height: 50px;
-		width: 50px;
-	}
-
-	display: table-cell;
-	vertical-align: middle;
-	height: 100px;
-	width: 100px;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 15px;
+  }
 }
 
-.simply-countdown>.simply-section .simply-amount,
-.simply-countdown>.simply-section .simply-word {
-	display: block;
-	color: rgba(white, 1);
+.simply-word {
+  @media screen and (max-width: $screen-sm) {
+    font-size: 20px;
+    background-color: blue;
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    font-size: 10px;
+    background-color: black;
+  }
+}
+.simply-countdown > .simply-section > div {
+  @media screen and (max-width: $screen-sm) {
+    height: 80px;
+    width: 80px;
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    height: 50px;
+    width: 50px;
+  }
+
+  display: table-cell;
+  vertical-align: middle;
+  height: 100px;
+  width: 100px;
 }
 
-.simply-countdown>.simply-section .simply-amount {
-	// font-size: 30px;
+.simply-countdown > .simply-section .simply-amount,
+.simply-countdown > .simply-section .simply-word {
+  display: block;
+  color: rgba(white, 1);
 }
 
-.simply-countdown>.simply-section .simply-word {
-	// color: rgba($brand-white, .7);
-	text-transform: uppercase;
-	// font-size: 20px;
+.simply-countdown > .simply-section .simply-amount {
+  // font-size: 30px;
+}
+
+.simply-countdown > .simply-section .simply-word {
+  // color: rgba($brand-white, .7);
+  text-transform: uppercase;
+  // font-size: 20px;
 }

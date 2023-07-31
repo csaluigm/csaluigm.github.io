@@ -1,18 +1,21 @@
 <!-- <div class="loader"></div> -->
 
 <!-- Header -->
-<header id="header" class="cover" role="banner" style="background-image:url(assets/images/Fotos/Arco_boda_Carol.jpg);"
-  data-stellar-background-ratio="0.5">
+<header id="header" class="cover" role="banner" style="
+    background: url(assets/images/Fotos/Arco_boda_Carol.jpg) no-repeat center
+      center;
+
+    background-size: cover;
+  " data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center">
         <div class="display-t">
-          <div class="display-tc" data-aos="fade-In" data-aos-duration="2000" >
+          <div class="display-tc" data-aos="fade-In" data-aos-duration="2000">
             <h1>Edurne y César</h1>
             <h2>¡Nos casamos!</h2>
-            <div class="simply-countdown simply-countdown-one">
-            </div>
+            <div class="simply-countdown simply-countdown-one"></div>
           </div>
         </div>
       </div>
@@ -26,7 +29,7 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center heading">
         <h2>¡Bienvenidos a nuestra boda!</h2>
-        <!-- <h3>22 de junio de 2024</h3> -->
+        <h3>22 de junio de 2024</h3>
         <!-- <h3>Pamplona (Navarra)</h3> -->
         <p></p>
       </div>
@@ -34,42 +37,47 @@
     <div class="couple-wrap">
       <div class="couple-half" data-aos="fade-right" data-aos-duration="2000">
         <div class="groom">
-          <img src="/assets/images/Fotos/Perfil_Edurne_Amarillo.jpg" alt="groom" class="img-responsive">
+          <img src="/assets/images/Fotos/Perfil_Edurne_Amarillo.jpg" alt="groom" class="img-responsive" />
         </div>
         <div class="desc-groom">
           <h3>Edurne Zalacáin</h3>
-          <p>Pamplonica de corazón y valenciana de adopción.
-          Me quedo con el cierzo del verano y el sol del invierno,
-          los bosques de hayas y el sonido del mar, el mosto y la horchata,
-          el cardo y la paella, lo mejor de los dos mundos dan lugar a la combinación perfecta.
-          Y tú, que estás leyendo todo esto, formas parte de ella 😘. </p>
+          <p>
+            Pamplonica de corazón y valenciana de adopción. Me quedo con el
+            cierzo del verano y el sol del invierno, los bosques de hayas y el
+            sonido del mar, el mosto y la horchata, el cardo y la paella, lo
+            mejor de los dos mundos dan lugar a la combinación perfecta. Y tú,
+            que estás leyendo todo esto, formas parte de ella 😘.
+          </p>
         </div>
       </div>
-      <p class="heart text-center"><i style="padding:15px;" class="icon-heart2">
-          <span  style="padding-top:5px"class="glyphicon glyphicon-heart"> </span>
+      <p class="heart text-center">
+        <i style="padding: 15px" class="icon-heart2">
+          <span style="padding-top: 5px" class="glyphicon glyphicon-heart">
+          </span>
         </i>
       </p>
       <div class="couple-half" data-aos="fade-left" data-aos-duration="2000">
         <div class="bride">
-          <img src="/assets/images/Fotos/Perfil_Cesar.jpg" alt="groom" class="img-responsive">
+          <img src="/assets/images/Fotos/Perfil_Cesar.jpg" alt="groom" class="img-responsive" />
         </div>
         <div class="desc-bride">
           <h3>César Luis</h3>
-          <p>Como en casa en ningún sitio. Un buen arroz con pollo de mi abuela y un buen chuletón,
-          son capaces de resucitarme en cualquier momento. Soy el servicio técnico de toda mi familia,
-          puedo con casi todo excepto con la mirada de Lola 🐶 al entrar en casa,
-          me transformo en las bodas y no las considero como tal si no suena un Flying Free.</p>
+          <p>
+            Como en casa en ningún sitio. Un buen arroz con pollo de mi abuela y
+            un buen chuletón, son capaces de resucitarme en cualquier momento.
+            Soy el servicio técnico de toda mi familia, puedo con casi todo
+            excepto con la mirada de Lola 🐶 al entrar en casa, me transformo en
+            las bodas y no las considero como tal si no suena un Flying Free.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-
-
 <!-- <div id="couple-story" style="background-image:url(/assets/images/img_bg_3.jpg);"> -->
 <!-- Planning-->
-<div id="couple-story" class="gradient"  data-aos="fade-up" data-aos-duration="2000">
+<div id="couple-story" class="gradient" data-aos="fade-up" data-aos-duration="2000">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center heading">
@@ -82,21 +90,22 @@
       <div class="col-md-12 col-md-offset-0">
         <ul class="timeline">
           <ng-container *ngFor="let event of planning; let index = index">
-          <li class=" {{index %2 != 0 ? 'timeline-inverted': '' }} " [attr.data-aos]="getSide(index)" data-aos-duration="2000">
-              <div class="timeline-badge" style="background-image:url({{event.image}});">
-              </div>
+            <li class=" {{ index % 2 != 0 ? 'timeline-inverted' : '' }} " [attr.data-aos]="getSide(index)"
+              data-aos-duration="2000">
+              <div class="timeline-badge" style="background-image:url({{ event.image }});"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h3 class="timeline-title">{{event.title}}</h3>
-                  <span class="date">{{event.location}}</span>
+                  <h3 class="timeline-title">{{ event.title }}</h3>
+                  <span class="date">{{ event.location }}</span>
                 </div>
 
                 <div *ngIf="event.time !== undefined" class="timeline-body">
                   <span class="glyphicon glyphicon-time"></span>
-                  {{event.time}}
+                  {{ event.time }}
                 </div>
                 <div class="timeline-body">
-                  <a href="https://goo.gl/maps/ChYTJQnfXt1Wnn7c9"> <span class="glyphicon glyphicon-map-marker"></span>
+                  <a href="https://goo.gl/maps/ChYTJQnfXt1Wnn7c9">
+                    <span class="glyphicon glyphicon-map-marker"></span>
                     Ubicación</a>
                 </div>
               </div>
@@ -109,7 +118,8 @@
 </div>
 
 <!-- Alojamiento-->
-<div id="event" class="bg" >
+<div id="event" class="bg">
+  <div class="overlay"></div>
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -122,11 +132,14 @@
       <div class="row">
         <!-- <div class="col-md-10 col-md-offset-1"> -->
         <div class="col-md-4 col-sm-4 text-center" *ngFor="let h of row; let i = index">
-          <div class="event-wrap" data-aos="flip-up" data-aos-duration="1000" >
-            <h3>{{h.name}}</h3>
+          <div class="event-wrap" data-aos="flip-up" data-aos-duration="1000">
+            <h3>{{ h.name }}</h3>
             <div>
-              <a href={{h.website}}> <span class="glyphicon glyphicon-globe"></span> Web</a>
-              <a href={{h.link}}> <span class="glyphicon glyphicon-map-marker"></span> Ubicación</a>
+              <a href="{{ h.website }}">
+                <span class="glyphicon glyphicon-globe"></span> Web</a>
+              <a href="{{ h.link }}">
+                <span class="glyphicon glyphicon-map-marker"></span>
+                Ubicación</a>
             </div>
 
             <!-- <div> -->
@@ -136,9 +149,8 @@
           </div>
         </div>
       </div>
-      <br>
+      <br />
     </ng-container>
-
   </div>
 </div>
 <div id="gallery" class="section-gray">
@@ -155,8 +167,8 @@
         <ul id="gallery-list">
           <ng-container *ngFor="let image of images; let index = index">
             <li class="one-third" data-aos="fade-In" data-aos-duration="2000"
-              style="background-image: url(/assets/images/Fotos/{{image}}); ">
-              <a href="/assets/images/gallery-1.jpg">
+              style="background-image: url(/assets/images/Fotos/{{ image }}); ">
+              <a href="/assets/images/Fotos/{{ image }}">
                 <div class="case-studies-summary">
                   <!-- <span>14 Photos</span> -->
                   <!-- <h2>Two Glas of Juice</h2> -->
@@ -170,10 +182,8 @@
   </div>
 </div>
 
-
 <div id="services" class="gradient">
   <div class="container">
-
     <div class="row animate-box">
       <div class="col-md-8 col-md-offset-2 text-center heading">
         <h2>Contacto</h2>
@@ -182,7 +192,6 @@
     </div>
 
     <div class="row" data-aos="fade-In" data-aos-duration="2000">
-
       <div class="col-sm-4 col-xs-offset-2" data-aos="fade-right" data-aos-duration="1000">
         <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
           <span class="icon">
@@ -190,30 +199,35 @@
           </span>
           <div class="feature-copy">
             <h3>Edurne</h3>
-            <p>Móvil: 618 938 753 <br> Email: edzado1603@gmail.com</p>
+            <p>
+              Móvil: 618 938 753 <br />
+              Email: edzado1603@gmail.com
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-4 col-xs-offset-2"data-aos="fade-left" data-aos-duration="1000">
+      <div class="col-sm-4 col-xs-offset-2" data-aos="fade-left" data-aos-duration="1000">
         <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
           <span class="icon">
             <i class="glyphicon glyphicon-phone"></i>
           </span>
           <div class="feature-copy">
             <h3>César</h3>
-            <p>Móvil: 616 199 313 <br> Email: cesar.luis91@gmail.com</p>
+            <p>
+              Móvil: 616 199 313 <br />
+              Email: cesar.luis91@gmail.com
+            </p>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
 
-
 <div class="gototop js-top">
-  <a href="#" class="js-gotop"> <i><span class="glyphicon glyphicon-arrow-up icon"></span></i>
+  <a href="#" class="js-gotop">
+    <i><span class="glyphicon glyphicon-arrow-up icon"></span></i>
   </a>
 </div>
 
