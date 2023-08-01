@@ -1,0 +1,72 @@
+// off canvas
+#offcanvas {
+  position: absolute;
+  z-index: 1901;
+  width: 270px;
+  background: lighten($brand-black, 0%);
+  top: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 45px 40px 40px 40px;
+  overflow-y: auto;
+  @include translateX(270px);
+  @include transition(0.5s);
+
+  .offcanvas & {
+    @include translateX(0px);
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.5);
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      > ul {
+        padding-left: 20px;
+        display: none;
+      }
+
+      &.offcanvas-has-dropdown {
+        > a {
+          display: block;
+          position: relative;
+
+          &:after {
+            position: absolute;
+            right: 0px;
+            @include icomoon;
+            content: "\e921";
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.2);
+            @include transition(0.5s);
+          }
+        }
+
+        &.active {
+          a {
+            &:after {
+              -webkit-transform: rotate(-180deg);
+              -moz-transform: rotate(-180deg);
+              -ms-transform: rotate(-180deg);
+              -o-transform: rotate(-180deg);
+              transform: rotate(-180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
