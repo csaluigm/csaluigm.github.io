@@ -1195,31 +1195,6 @@ figure {
   }
 }
 
-// @media screen and (min-width: $screen-lg) {
-//   #header {
-//     background-color: black;
-//     background-position: 0px 0px !important;
-//   }
-// }
-// @media screen and (max-width: $screen-lg) {
-//   #header {
-//     background-color: blue;
-//     background-position: -100px 0px !important;
-//   }
-// }
-// @media screen and (max-width: $screen-sm) {
-//   #header {
-//     background-color: red;
-//     background-position: -150px 0px !important;
-//   }
-// }
-// @media screen and (max-width: $screen-xs) {
-//   #header {
-//     background-color: green;
-//     background-position: -200px 0px !important;
-//   }
-// }
-
 .container {
   // background-color: $babel-mint !important;
   animation: slide-in-smooth 1s linear 1;
@@ -1388,6 +1363,12 @@ figure {
     // }
   }
 
+  @media screen and (max-width: $screen-sm) {
+    .display-t,
+    .display-tc {
+      margin-top: 40vw;
+    }
+  }
   &.cover-sm {
     height: 600px;
 

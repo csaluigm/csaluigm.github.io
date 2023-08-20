@@ -169,12 +169,12 @@ $screen-xs: 480px !default;
 .simply-word {
   @media screen and (max-width: $screen-sm) {
     font-size: 20px;
-    background-color: blue;
+    // background-color: blue;
   }
 
   @media screen and (max-width: $screen-xs) {
     font-size: 10px;
-    background-color: black;
+    // background-color: black;
   }
 }
 .simply-countdown > .simply-section > div {

@@ -1,0 +1,1 @@
+ng deploy --repo=https://github.com/csaluigm/csaluigm.github.io.git --name="" --email=email@gmail.com --cname=edurneycesar.com --branch=gh-pages --no-silent
