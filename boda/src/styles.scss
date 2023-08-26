@@ -1,5 +1,18 @@
 @import "assets/css/animate.css";
 
+@font-face {
+  font-family: "Pacifico";
+  src: url("./assets/fonts/Pacifico-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Cookie";
+  src: url("./assets/fonts/Cookie-Regular.ttf");
+}
+@font-face {
+  font-family: "Satisfy";
+  src: url("./assets/fonts/Satisfy-Regular.ttf");
+}
 html {
   --scrollbarBG: #cfd8dc;
   --thumbBG: #90a4ae;
@@ -7,6 +20,7 @@ html {
 
 body::-webkit-scrollbar {
   width: 11px;
+  // font-family: "Pacifico";
 }
 
 body {
