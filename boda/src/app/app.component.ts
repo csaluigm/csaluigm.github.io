@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { hotelGroups } from './hotels';
 import { planning } from './planning';
 import { images } from './images';
 import * as Aos from 'aos';
+import { ViewportScroller } from '@angular/common';
 
 declare var simplyCountdown: any;
 declare var $: any;
@@ -18,11 +19,16 @@ export class AppComponent implements OnInit {
   images = images;
   Aos = Aos;
   gallery = [];
+  isScrolled: boolean;
+
+  constructor(private viewPortScroller: ViewportScroller) {
+    this.isScrolled = false;
+   }
 
   ngOnInit(): void {
     this.setCountdown();
     this.parallax();
-    this.goToTop();
+    // this.goToTop();
     this.Aos.init();
   }
 
@@ -54,6 +60,18 @@ export class AppComponent implements OnInit {
       }
     });
   }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+   if (window.scrollY > 200) {
+      this.isScrolled = true;
+   } else {
+      this.isScrolled = false;
+   } 
+  }
+   scrollToTop() {
+    this.viewPortScroller.scrollToPosition([0, 0]); 
+   }
 
   parallax() {
     // $(window).stellar();

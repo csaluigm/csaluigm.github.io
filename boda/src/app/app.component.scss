@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 // @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
-body {
+// body {
+//   overflow-x: hidden !important;
+// }
+html, body {
   overflow-x: hidden !important;
+  position: relative !important;
 }
-
 $bootstrap-sass-asset-helper: false !default;
 
 @import "styles/vars.scss";
@@ -574,43 +577,6 @@ figure {
   text-transform: uppercase;
 }
 
-.gototop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  @include transition(0.5s);
-
-  &.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  a {
-    width: 50px;
-    height: 50px;
-    display: table;
-    background: rgba(0, 0, 0, 0.5);
-    color: $brand-white;
-    text-align: center;
-    @include border-radius(4px);
-
-    i {
-      height: 50px;
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: none;
-      outline: none;
-    }
-  }
-}
 
 // Buttons
 .btn {
@@ -2008,14 +1974,43 @@ div .simply-section {
   }
 }
 
-.uppercase {
-  font-size: 14px;
-  color: $brand-black;
-  margin-bottom: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
+// .gototop {
+//   position: fixed;
+//   bottom: 20px;
+//   right: 20px;
+//   z-index: 999;
+//   opacity: 0;
+//   visibility: hidden;
+//   @include transition(0.5s);
+//
+//   &.active {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+//
+//   a {
+//     width: 50px;
+//     height: 50px;
+//     display: table;
+//     background: rgba(0, 0, 0, 0.5);
+//     color: $brand-white;
+//     text-align: center;
+//     @include border-radius(4px);
+//
+//     i {
+//       height: 50px;
+//       display: table-cell;
+//       vertical-align: middle;
+//     }
+//
+//     &:hover,
+//     &:active,
+//     &:focus {
+//       text-decoration: none;
+//       outline: none;
+//     }
+//   }
+// }
 .gototop {
   position: fixed;
   bottom: 20px;
@@ -2023,7 +2018,7 @@ div .simply-section {
   z-index: 999;
   opacity: 0;
   visibility: hidden;
-  @include transition(0.5s);
+  transition: opacity 0.5s, visibility 0.5s;
 
   &.active {
     opacity: 1;
@@ -2033,23 +2028,16 @@ div .simply-section {
   a {
     width: 50px;
     height: 50px;
-    display: table;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: rgba(0, 0, 0, 0.5);
-    color: $brand-white;
-    text-align: center;
-    @include border-radius(4px);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
 
     i {
-      height: 50px;
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: none;
-      outline: none;
+      font-size: 24px;
     }
   }
 }

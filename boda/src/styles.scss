@@ -17,7 +17,11 @@ html {
   --scrollbarBG: #cfd8dc;
   --thumbBG: #90a4ae;
 }
-
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
 body::-webkit-scrollbar {
   width: 11px;
   // font-family: "Pacifico";

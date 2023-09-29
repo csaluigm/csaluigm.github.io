@@ -12,7 +12,7 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center">
         <div class="display-t">
-          <div class="display-tc" data-aos="fade-In" data-aos-duration="2000">
+          <div class="display-tc" data-aos-once="true" data-aos="fade-In" data-aos-duration="2000">
             <h1>
               <span>Edurne</span>
               <span class="separator">&</span>
@@ -29,7 +29,7 @@
 
 <!-- Couple Intro -->
 <div id="couple">
-  <div class="container" data-aos="fade-up" data-aos-duration="2000">
+  <div class="container" data-aos-once="true "data-aos="fade-up" data-aos-duration="2000">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center heading">
         <h2>¡Bienvenidos a nuestra boda!</h2>
@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="couple-wrap">
-      <div class="couple-half" data-aos="fade-right" data-aos-duration="2000">
+      <div class="couple-half" data-aos-once="true" data-aos="fade-right" data-aos-duration="2000">
         <div class="groom">
           <img src="/assets/images/Fotos/Perfil_Edurne_Amarillo.jpg" alt="groom" class="img-responsive" />
         </div>
@@ -60,7 +60,7 @@
           </span>
         </i>
       </p>
-      <div class="couple-half" data-aos="fade-left" data-aos-duration="2000">
+      <div class="couple-half" data-aos-once="true" data-aos="fade-left" data-aos-duration="2000">
         <div class="bride">
           <img src="/assets/images/Fotos/Perfil_Cesar.jpg" alt="groom" class="img-responsive" />
         </div>
@@ -81,7 +81,7 @@
 
 <!-- <div id="couple-story" style="background-image:url(/assets/images/img_bg_3.jpg);"> -->
 <!-- Planning-->
-<div id="couple-story" class="gradient" data-aos="fade-up" data-aos-duration="2000">
+<div id="couple-story" class="gradient" data-aos-once="true" data-aos="fade-up" data-aos-duration="2000">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center heading">
@@ -127,7 +127,7 @@
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2 text-center heading" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-md-8 col-md-offset-2 text-center heading" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000">
         <!-- <span></span> -->
         <h2>Alojamiento</h2>
       </div>
@@ -136,7 +136,7 @@
       <div class="row">
         <!-- <div class="col-md-10 col-md-offset-1"> -->
         <div class="col-md-4 col-sm-4 text-center" *ngFor="let h of row; let i = index">
-          <div class="event-wrap" data-aos="flip-up" data-aos-duration="1000">
+          <div class="event-wrap" data-aos-once="true" data-aos="flip-up" data-aos-duration="1000">
             <h3>{{ h.name }}</h3>
             <div>
               <a href="{{ h.website }}">
@@ -170,7 +170,7 @@
       <div class="col-md-12">
         <ul id="gallery-list">
           <ng-container *ngFor="let image of images; let index = index">
-            <li class="one-third" data-aos="fade-In" data-aos-duration="2000"
+            <li class="one-third" data-aos-once="true" data-aos="fade-In" data-aos-duration="2000"
               style="background-image: url(/assets/images/Fotos/{{ image }}); ">
               <a href="/assets/images/Fotos/{{ image }}">
                 <div class="case-studies-summary">
@@ -186,7 +186,7 @@
   </div>
 </div>
 
-<div id="services" class="gradient">
+<div id="services" class="gradient" style="padding-bottom:0px;">
   <div class="container">
     <div class="row animate-box">
       <div class="col-md-8 col-md-offset-2 text-center heading">
@@ -195,9 +195,9 @@
       </div>
     </div>
 
-    <div class="row" data-aos="fade-In" data-aos-duration="2000">
-      <div class="col-sm-4 col-xs-offset-2" data-aos="fade-right" data-aos-duration="1000">
-        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+    <div class="row" style="padding-bottom: 150px;">
+      <div class="col-sm-4 col-xs-offset-2" data-aos-once="true" data-aos="fade-right" data-aos-duration="1000">
+        <div class="feature-left" >
           <span class="icon">
             <i class="glyphicon glyphicon-phone"></i>
           </span>
@@ -211,8 +211,8 @@
         </div>
       </div>
 
-      <div class="col-sm-4 col-xs-offset-2" data-aos="fade-left" data-aos-duration="1000">
-        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+      <div class="col-sm-4 col-xs-offset-2" data-aos-once="true" data-aos="fade-left" data-aos-duration="1000"  >
+        <div class="feature-left" >
           <span class="icon">
             <i class="glyphicon glyphicon-phone"></i>
           </span>
@@ -229,10 +229,11 @@
   </div>
 </div>
 
-<div class="gototop js-top">
-  <a href="#" class="js-gotop">
+<div class="gototop" [ngClass]="{'active': isScrolled}"(click)="scrollToTop()" >
+ <a href="#" class="">
     <i><span class="glyphicon glyphicon-arrow-up icon"></span></i>
   </a>
 </div>
+
 
 <router-outlet></router-outlet>
