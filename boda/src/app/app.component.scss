@@ -165,6 +165,10 @@ figure {
   background: $brand-primary;
 }
 
+#header h1,h2{
+  font-family: $font-main-title !important;
+}
+
 #couple h2,
 #couple-story h2,
 #event h2,
