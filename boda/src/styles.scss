@@ -6,13 +6,24 @@
 }
 
 @font-face {
-  font-family: "Cookie";
-  src: url("./assets/fonts/Cookie-Regular.ttf");
+  font-family: "Sacramento";
+  src: url("./assets/fonts/Sacramento-Regular.ttf");
 }
+
 @font-face {
-  font-family: "Satisfy";
-  src: url("./assets/fonts/Satisfy-Regular.ttf");
+  font-family: "Englebert";
+  src: url("./assets/fonts/Englebert-Regular.ttf");
 }
+
+// @font-face {
+//   font-family: "Cookie";
+//   src: url("./assets/fonts/Cookie-Regular.ttf");
+// }
+// @font-face {
+//   font-family: "Satisfy";
+//   src: url("./assets/fonts/Satisfy-Regular.ttf");
+// }
+
 html {
   --scrollbarBG: #cfd8dc;
   --thumbBG: #90a4ae;
