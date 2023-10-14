@@ -164,6 +164,7 @@ figure {
   color: $brand-white;
   background: $brand-primary;
 }
+
 #couple h2,
 #couple-story h2,
 #event h2,
@@ -1574,6 +1575,7 @@ div .simply-section {
   .feature-copy {
     float: left;
     width: 80%;
+    font-size:16px;
 
     @media screen and (max-width: $screen-sm) {
       width: 70%;
@@ -1582,7 +1584,7 @@ div .simply-section {
 
     h3 {
       text-transform: uppercase;
-      font-size: 18px;
+      font-size: 22px;
       color: #5d5d5d;
       margin-bottom: 10px;
     }
@@ -1822,6 +1824,6 @@ div .simply-section {
   }
 }
 
-div,p,span{
+div,p,span:not(.excluded){
   font-family: $font-primary !important;
 }

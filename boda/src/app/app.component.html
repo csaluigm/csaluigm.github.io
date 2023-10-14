@@ -54,9 +54,9 @@
           </p>
         </div>
       </div>
-      <p class="heart text-center">
-        <i style="padding: 15px" class="icon-heart2">
-          <span style="padding-top: 5px" class="glyphicon glyphicon-heart">
+      <p class="heart text-center excluded">
+        <i style="padding: 15px" class="icon-heart2 excluded">
+          <span style="padding-top: 5px" class="glyphicon glyphicon-heart excluded">
           </span>
         </i>
       </p>
@@ -69,8 +69,7 @@
           <p class="intro-text">
             Como en casa en ningún sitio. Un buen arroz con pollo de mi abuela y
             un buen chuletón, son capaces de resucitarme en cualquier momento.
-            Soy el servicio técnico de toda mi familia, puedo con casi todo
-            excepto con la mirada de Lola 🐶 al entrar en casa, me transformo en
+            Puedo con casi todo excepto con la mirada de Lola 🐶 al entrar en casa, me transformo en
             las bodas y no las considero como tal si no suena un Flying Free.
           </p>
         </div>
@@ -104,12 +103,12 @@
                 </div>
 
                 <div *ngIf="event.time !== undefined" class="timeline-body">
-                  <span class="glyphicon glyphicon-time"></span>
+                  <span class="glyphicon glyphicon-time excluded"></span>
                   {{ event.time }}
                 </div>
                 <div class="timeline-body">
                   <a href="https://goo.gl/maps/ChYTJQnfXt1Wnn7c9">
-                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <span class="glyphicon glyphicon-map-marker excluded"></span>
                     Ubicación</a>
                 </div>
               </div>
@@ -140,9 +139,9 @@
             <h3>{{ h.name }}</h3>
             <div>
               <a href="{{ h.website }}">
-                <span class="glyphicon glyphicon-globe"></span> Web</a>
+                <span class="glyphicon glyphicon-globe excluded"></span> Web</a>
               <a href="{{ h.link }}">
-                <span class="glyphicon glyphicon-map-marker"></span>
+                <span class="glyphicon glyphicon-map-marker excluded"></span>
                 Ubicación</a>
             </div>
 
@@ -195,8 +194,8 @@
       </div>
     </div>
 
-    <div class="row" style="padding-bottom: 150px;">
-      <div class="col-sm-4 col-xs-offset-2" data-aos-once="true" data-aos="fade-right" data-aos-duration="1000">
+    <div class="row" style="padding-bottom: 98px;">
+      <div class="col-sm-4 col-xs-offset-2">
         <div class="feature-left" >
           <span class="icon">
             <i class="glyphicon glyphicon-phone"></i>
@@ -211,7 +210,7 @@
         </div>
       </div>
 
-      <div class="col-sm-4 col-xs-offset-2" data-aos-once="true" data-aos="fade-left" data-aos-duration="1000"  >
+      <div class="col-sm-4 col-xs-offset-2"   >
         <div class="feature-left" >
           <span class="icon">
             <i class="glyphicon glyphicon-phone"></i>
@@ -231,7 +230,7 @@
 
 <div class="gototop" [ngClass]="{'active': isScrolled}"(click)="scrollToTop()" >
  <a href="#" class="">
-    <i><span class="glyphicon glyphicon-arrow-up icon"></span></i>
+    <i><span class="glyphicon glyphicon-arrow-up icon excluded"></span></i>
   </a>
 </div>
 
