@@ -97,7 +97,12 @@
               <div class="timeline-badge" style="background-image:url({{ event.image }});"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h3 class="timeline-title">{{ event.title }}</h3>
+                  <h3 class="timeline-title">
+                    {{event.title}}
+                    <div  style="" class="excluded" *ngFor="let text of event.title.split('|'); let index = index">
+                      {{event.start}} <span style="font-size:30px;" *ngIf="event.isBus" class="glyphicon glyphicon-arrow-right excluded"></span> {{event.end}}
+                    </div>
+                  </h3>
                   <span class="date">{{ event.location }}</span>
                 </div>
 
@@ -202,8 +207,7 @@
           <div class="feature-copy">
             <h3>Edurne</h3>
             <p>
-              Móvil: 618 938 753 <br />
-              Email: edzado1603@gmail.com
+              618 938 753 <br />
             </p>
           </div>
         </div>
@@ -217,8 +221,7 @@
           <div class="feature-copy">
             <h3>César</h3>
             <p>
-              Móvil: 616 199 313 <br />
-              Email: cesar.luis91@gmail.com
+              616 199 313 <br />
             </p>
           </div>
         </div>
