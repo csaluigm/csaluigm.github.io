@@ -67,10 +67,10 @@ export class AppComponent implements OnInit {
       this.isScrolled = true;
    } else {
       this.isScrolled = false;
-   } 
+   }
   }
    scrollToTop() {
-    this.viewPortScroller.scrollToPosition([0, 0]); 
+    this.viewPortScroller.scrollToPosition([0, 0]);
    }
 
   parallax() {
@@ -86,25 +86,28 @@ export class AppComponent implements OnInit {
     });
   }
 
-  // counterWayPoint() {
-  // 	if ($('#fh5co-counter').length > 0 ) {
-  // 		$('#fh5co-counter').waypoint( ( direction:any )=> {
-  //
-  // 			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-  // 				setTimeout( this.counter , 400);
-  // 				$(this.element).addClass('animated');
-  // 			}
-  // 		} , { offset: '90%' } );
-  // 	}
-  // };
-  //
-  setCountdown(): void {
-    var d = new Date('Jun 22, 2024 11:45:00');
 
-    simplyCountdown('.simply-countdown-one', {
-      year: d.getFullYear(),
-      month: d.getMonth() + 1,
-      day: d.getDate(),
-    });
+  setCountdown(): void {
+  // Months are 0-based (0 for January, 11 for December)
+  const utcDate = new Date(Date.UTC(2024, 5, 22, 11, 45));
+  // const utcDate = new Date(Date.UTC(2023, 9, 21, 21, 11));
+
+    var countdownArgs={
+      year: utcDate.getFullYear(),
+      month: utcDate.getMonth() + 1,
+      day: utcDate.getDate(),
+      hours: utcDate.getHours(),
+      minutes: utcDate.getMinutes(),
+      seconds: utcDate.getSeconds(),
+      enableUtc:true,
+
+    onEnd: function () {
+        console.log("💍")
+                return;
+            },
+    }
+
+    console.log(countdownArgs)
+    simplyCountdown('.simply-countdown-one', countdownArgs);
   }
 }

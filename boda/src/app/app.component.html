@@ -34,7 +34,6 @@
       <div class="col-md-8 col-md-offset-2 text-center heading">
         <h2>¡Bienvenidos a nuestra boda!</h2>
         <h3>22 de junio de 2024</h3>
-        <!-- <h3>Pamplona (Navarra)</h3> -->
         <p></p>
       </div>
     </div>
@@ -77,15 +76,12 @@
   </div>
 </div>
 
-<!-- <div id="couple-story" style="background-image:url(/assets/images/img_bg_3.jpg);"> -->
 <!-- Planning-->
 <div id="couple-story" class="gradient" data-aos-once="true" data-aos="fade-up" data-aos-duration="2000">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center heading">
         <h2>Planning</h2>
-        <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind -->
-        <!--   texts.</p> -->
       </div>
     </div>
     <div class="row">
@@ -99,7 +95,7 @@
                 <div class="timeline-heading">
                   <h3 class="timeline-title">
                     {{event.title}}
-                    <div  style="" class="excluded" *ngFor="let text of event.title.split('|'); let index = index">
+                    <div  style="font-size:30px;" class="excluded" *ngFor="let text of event.title.split('|'); let index = index">
                       {{event.start}} <span style="font-size:30px;" *ngIf="event.isBus" class="glyphicon glyphicon-arrow-right excluded"></span> {{event.end}}
                     </div>
                   </h3>
@@ -131,13 +127,11 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center heading" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000">
-        <!-- <span></span> -->
         <h2>Alojamiento</h2>
       </div>
     </div>
     <ng-container *ngFor="let row of hotelGroups; let index = index">
       <div class="row">
-        <!-- <div class="col-md-10 col-md-offset-1"> -->
         <div class="col-md-4 col-sm-4 text-center" *ngFor="let h of row; let i = index">
           <div class="event-wrap" data-aos-once="true" data-aos="flip-up" data-aos-duration="1000">
             <h3>{{ h.name }}</h3>
@@ -149,10 +143,6 @@
                 Ubicación</a>
             </div>
 
-            <!-- <div> -->
-            <!--   <a href={{h.link}}> <span class="glyphicon glyphicon-map-marker"></span> -->
-            <!--     Ubicación</a> -->
-            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -165,8 +155,6 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center heading animate-box">
         <h2>¡Te esperamos!</h2>
-        <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind -->
-        <!-- texts.</p> -->
       </div>
     </div>
     <div class="row row-bottom-padded-md">
@@ -177,8 +165,6 @@
               style="background-image: url(/assets/images/Fotos/{{ image }}); ">
               <a href="/assets/images/Fotos/{{ image }}">
                 <div class="case-studies-summary">
-                  <!-- <span>14 Photos</span> -->
-                  <!-- <h2>Two Glas of Juice</h2> -->
                 </div>
               </a>
             </li>
@@ -194,7 +180,6 @@
     <div class="row animate-box">
       <div class="col-md-8 col-md-offset-2 text-center heading">
         <h2>Contacto</h2>
-        <!-- <p>XXXXXXXXXXXXXXXX</p> -->
       </div>
     </div>
 
