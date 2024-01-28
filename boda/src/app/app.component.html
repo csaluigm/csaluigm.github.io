@@ -16,7 +16,7 @@
             <h1>
               <span class="excluded">Edurne </span>
               <span class="separator excluded">y</span>
-              <span class="excluded" > César</span>
+              <span class="excluded"> César</span>
             </h1>
             <h2>¡Nos casamos!</h2>
             <div class="simply-countdown simply-countdown-one"></div>
@@ -29,7 +29,7 @@
 
 <!-- Couple Intro -->
 <div id="couple">
-  <div class="container" data-aos-once="true "data-aos="fade-up" data-aos-duration="2000">
+  <div class="container" data-aos-once="true " data-aos="fade-up" data-aos-duration="2000">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center heading">
         <h2>¡Bienvenidos a nuestra boda!</h2>
@@ -66,9 +66,12 @@
         <div class="desc-bride">
           <h3>César Luis</h3>
           <p class="intro-text">
-          Como en casa en ningún sitio, aunque últimamente me siento un poco camaleón 🦎 con tanta escalada.
-          Un buen arroz con pollo de mi abuela y un buen chuletón, son capaces de resucitarme en cualquier momento.
-          Me transformo en las bodas <span style="display:block">y no las considero como tal si no suena un Flying Free 🎶. </span>
+            Como en casa en ningún sitio, aunque últimamente me siento un poco
+            camaleón 🦎 con tanta escalada. Un buen arroz con pollo de mi abuela
+            y un buen chuletón, son capaces de resucitarme en cualquier momento.
+            Me transformo en las bodas
+            <span style="display: block">y no las considero como tal si no suena un Flying Free 🎶.
+            </span>
           </p>
         </div>
       </div>
@@ -94,9 +97,15 @@
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h3 class="timeline-title">
-                    {{event.title}}
-                    <div  style="font-size:30px;" class="excluded" *ngFor="let text of event.title.split('|'); let index = index">
-                      {{event.start}} <span style="font-size:30px;" *ngIf="event.isBus" class="glyphicon glyphicon-arrow-right excluded"></span> {{event.end}}
+                    {{ event.title }}
+                    <div style="font-size: 30px" class="excluded" *ngFor="
+                        let text of event.title.split('|');
+                        let index = index
+                      ">
+                      {{ event.start }}
+                      <span style="font-size: 30px" *ngIf="event.isBus"
+                        class="glyphicon glyphicon-arrow-right excluded"></span>
+                      {{ event.end }}
                     </div>
                   </h3>
                   <span class="date">{{ event.location }}</span>
@@ -107,7 +116,8 @@
                   {{ event.time }}
                 </div>
                 <div class="timeline-body">
-                  <a href="https://goo.gl/maps/ChYTJQnfXt1Wnn7c9">
+                  <a href="{{ event.link }}" target="_blank">
+                    <!-- <a href="https://goo.gl/maps/ChYTJQnfXt1Wnn7c9"> -->
                     <span class="glyphicon glyphicon-map-marker excluded"></span>
                     Ubicación</a>
                 </div>
@@ -126,7 +136,8 @@
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2 text-center heading" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-md-8 col-md-offset-2 text-center heading" data-aos-once="true" data-aos="fade-up"
+        data-aos-duration="1000">
         <h2>Alojamiento</h2>
       </div>
     </div>
@@ -136,13 +147,12 @@
           <div class="event-wrap" data-aos-once="true" data-aos="flip-up" data-aos-duration="1000">
             <h3>{{ h.name }}</h3>
             <div>
-              <a href="{{ h.website }}">
+              <a href="{{ h.website }}" target="_blank">
                 <span class="glyphicon glyphicon-globe excluded"></span> Web</a>
-              <a href="{{ h.link }}">
+              <a href="{{ h.link }}" target="_blank">
                 <span class="glyphicon glyphicon-map-marker excluded"></span>
                 Ubicación</a>
             </div>
-
           </div>
         </div>
       </div>
@@ -164,8 +174,7 @@
             <li class="one-third" data-aos-once="true" data-aos="fade-In" data-aos-duration="2000"
               style="background-image: url(/assets/images/Fotos/{{ image }}); ">
               <a href="/assets/images/Fotos/{{ image }}">
-                <div class="case-studies-summary">
-                </div>
+                <div class="case-studies-summary"></div>
               </a>
             </li>
           </ng-container>
@@ -175,7 +184,7 @@
   </div>
 </div>
 
-<div id="services" class="gradient" style="padding-bottom:0px;">
+<div id="services" class="gradient" style="padding-bottom: 0px">
   <div class="container">
     <div class="row animate-box">
       <div class="col-md-8 col-md-offset-2 text-center heading">
@@ -183,31 +192,27 @@
       </div>
     </div>
 
-    <div class="row" style="padding-bottom: 98px;">
+    <div class="row" style="padding-bottom: 98px">
       <div class="col-sm-4 col-xs-offset-2">
-        <div class="feature-left" >
+        <div class="feature-left">
           <span class="icon">
             <i class="glyphicon glyphicon-phone"></i>
           </span>
           <div class="feature-copy">
             <h3>Edurne</h3>
-            <p>
-              618 938 753 <br />
-            </p>
+            <p>618 938 753 <br /></p>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-4 col-xs-offset-2"   >
-        <div class="feature-left" >
+      <div class="col-sm-4 col-xs-offset-2">
+        <div class="feature-left">
           <span class="icon">
             <i class="glyphicon glyphicon-phone"></i>
           </span>
           <div class="feature-copy">
             <h3>César</h3>
-            <p>
-              616 199 313 <br />
-            </p>
+            <p>616 199 313 <br /></p>
           </div>
         </div>
       </div>
@@ -215,11 +220,10 @@
   </div>
 </div>
 
-<div class="gototop" [ngClass]="{'active': isScrolled}"(click)="scrollToTop()" >
- <a href="#" class="">
+<div class="gototop" [ngClass]="{ active: isScrolled }" (click)="scrollToTop()">
+  <a href="#" class="">
     <i><span class="glyphicon glyphicon-arrow-up icon excluded"></span></i>
   </a>
 </div>
-
 
 <router-outlet></router-outlet>
